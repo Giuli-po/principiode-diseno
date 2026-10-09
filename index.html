@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Biblioteca Virtual ITR</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header class="navbar">
+    <div class="contenedor nav-contenido">
+      <a href="#inicio" class="logo">
+        <span class="logo-cuadro">ITR</span>
+        <span>ITR - Biblioteca Virtual</span>
+      </a>
+
+      <nav>
+        <a href="#inicio" class="activo">Inicio</a>
+        <a href="#catalogo">Catálogo</a>
+        <a href="#prestamos">Mis préstamos</a>
+        <a href="#consulta">Ayuda</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="inicio" class="hero">
+      <div class="hero-fondo"></div>
+      <div class="contenedor hero-contenido">
+        <p class="etiqueta">COMUNIDAD ESCOLAR</p>
+        <h1>Biblioteca Virtual ITR</h1>
+        <p class="subtitulo">
+          Encontrá libros, consultá tus préstamos y descubrí nuevas lecturas.
+        </p>
+
+        <form id="form-busqueda" class="buscador">
+          <label for="busqueda">Buscá en la biblioteca</label>
+          <div class="fila-busqueda">
+            <input
+              type="search"
+              id="busqueda"
+              placeholder="Buscar por título, autor o tema"
+            >
+            <button type="submit">Buscar</button>
+          </div>
+          <p id="mensaje-busqueda" class="mensaje"></p>
+        </form>
+      </div>
+    </section>
+
+    <section id="consulta" class="seccion-consulta">
+      <div class="contenedor">
+        <div class="tarjeta-consulta">
+          <p class="etiqueta">DISPONIBILIDAD</p>
+          <h2>Consultar disponibilidad</h2>
+          <p class="descripcion">
+            Completá los datos para realizar una consulta de disponibilidad del libro.
+          </p>
+
+          <form id="form-disponibilidad">
+            <div class="campos">
+              <div>
+                <label for="nombre">Nombre del alumno</label>
+                <input type="text" id="nombre" placeholder="Ej. Giuliana Porta">
+              </div>
+
+              <div>
+                <label for="curso">Curso</label>
+                <input type="text" id="curso" placeholder="Ej. 5° P">
+              </div>
+
+              <div>
+                <label for="codigo">Código del libro</label>
+                <input type="text" id="codigo" placeholder="Ej. Harry Potter">
+              </div>
+            </div>
+
+            <div class="consulta-final">
+              <p id="mensaje-disponibilidad" class="mensaje"></p>
+              <button type="submit">Consultar disponibilidad</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="seccion contenedor">
+      <p class="etiqueta">ACCESOS DIRECTOS</p>
+      <h2>Todo lo importante, a un paso</h2>
+
+      <div class="acciones">
+        <button class="accion destacada" data-destino="catalogo">
+          <span class="icono">▣</span>
+          <span>
+            <strong>Explorar catálogo</strong>
+            <small>Recorré las lecturas disponibles y encontrá tu próximo libro.</small>
+          </span>
+        </button>
+
+        <button class="accion" data-destino="prestamos">
+          <span class="icono">✓</span>
+          <span>
+            <strong>Mis préstamos</strong>
+            <small>Revisá movimientos, fechas y devoluciones.</small>
+          </span>
+        </button>
+
+        <button class="accion" data-destino="consulta">
+          <span class="icono">+</span>
+          <span>
+            <strong>Solicitar libro</strong>
+            <small>Consultá primero si el título se encuentra disponible.</small>
+          </span>
+        </button>
+      </div>
+    </section>
+
+    <section id="catalogo" class="seccion informacion contenedor">
+      <p class="etiqueta">BIBLIOTECA AL DÍA</p>
+      <h2>Información de la biblioteca</h2>
+      <p class="descripcion">
+        Un vistazo rápido a las lecturas, movimientos y sugerencias de esta semana.
+      </p>
+
+      <div class="informacion-grid">
+        <article class="modulo">
+          <span class="numero">01 · DESTACADOS</span>
+          <h3>Libros destacados</h3>
+          <p>Selección breve de lecturas para descubrir, compartir y disfrutar esta semana.</p>
+          <strong>Novedades para explorar</strong>
+        </article>
+
+        <article id="prestamos" class="modulo">
+          <span class="numero">02 · MOVIMIENTOS</span>
+          <h3>Últimos préstamos</h3>
+          <p>Resumen rápido de movimientos y devoluciones recientes de la biblioteca.</p>
+          <strong>Consultá el estado de tus préstamos</strong>
+        </article>
+
+        <article class="modulo">
+          <span class="numero">03 · SUGERENCIAS</span>
+          <h3>Recomendaciones</h3>
+          <p>Ideas de lecturas según temas, materias o intereses para seguir aprendiendo.</p>
+          <strong>Elegí un tema para comenzar</strong>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="contenedor footer-contenido">
+      <div>
+        <h3>ITR · Biblioteca Virtual</h3>
+        <p>Un espacio simple para buscar, consultar y descubrir nuevas lecturas.</p>
+      </div>
+
+      <div class="footer-derecha">
+        <div class="footer-links">
+          <a href="#catalogo">Catálogo</a>
+          <a href="#prestamos">Mis préstamos</a>
+          <a href="#consulta">Ayuda</a>
+        </div>
+        <p class="contacto">Contacto por gmail</p>
+        <p>biblioteca.itr@gmail.com</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
